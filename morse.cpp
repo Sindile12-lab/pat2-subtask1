@@ -1,10 +1,14 @@
+// PAT Subtask 1: Morse Code Converter
+// Name : Thabethe Sindile Maybe
 #include <iostream>
 #include <string>
 #include <cctype> 
 using namespace std;
 
+// Function to convert a single character to Morse code
 string getMorse(char c) {
-    switch(c) {
+    //Switch statement for A-Z
+	switch(c) {
         case 'A': return ".-"; case 'B': return "-..."; case 'C': return "-.-.";
         case 'D': return "-.."; case 'E': return "."; case 'F': return "..-.";
         case 'G': return "--."; case 'H': return "...."; case 'I': return "..";
@@ -18,11 +22,14 @@ string getMorse(char c) {
     }
 }
 
+//Output Morse code for each letter and the full messageS
 int main() {
-    string input;
+    //Declare variables
+	string input;
     string fullMorse = "";
     
-    cout << "Enter a message in English (A-Z characters only): ";
+    //Gert user input
+	cout << "Enter a message in English (A-Z characters only): ";
     getline(cin, input);
 
     for(int i = 0; i < input.length(); i++) {
@@ -40,4 +47,5 @@ int main() {
 
     cout << "\nFull Morse Code Message: " << fullMorse << endl;
     return 0;
+//Tested with input: HELLO
 }
